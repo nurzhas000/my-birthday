@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Приглашение на День Рождения</title>
+    <style>
+        :root {
+            --primary: #FFC0CB; /* Розовый цвет текста */
+            --secondary: #FF69B4; /* Ярко-розовый */
+            --accent: #000; /* Черный фон */
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Times New Roman', serif;
+            background: var(--accent) url('https://www.transparenttextures.com/patterns/stardust.png');
+            color: var(--primary);
+            min-height: 100vh;
+            text-align: center;
+            position: relative;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 4rem 2rem;
+            position: relative;
+            z-index: 1;
+        }
+
+        .hero {
+            position: relative;
+            padding: 4rem 2rem;
+        }
+
+        .floating-box {
+            display: inline-block;
+            border: 3px solid var(--primary);
+            padding: 2rem;
+            background: var(--accent);
+            box-shadow: 10px 10px 0 rgba(255, 192, 203, 0.2);
+            font-weight: bold;
+            font-size: 1.5rem;
+            animation: float 6s infinite ease-in-out;
+        }
+
+        .main-heading {
+            font-size: 3.2rem;
+            font-weight: bold;
+            margin-bottom: 1rem;
+        }
+
+        .sub-heading {
+            font-size: 1.8rem;
+            margin-bottom: 2rem;
+        }
+
+        .age-number {
+            font-size: 5rem;
+            font-weight: bold;
+            margin-bottom: 2rem;
+        }
+
+        .details-list {
+            list-style: none;
+            font-size: 1.2rem;
+            line-height: 2;
+            margin-bottom: 2rem;
+        }
+
+        .graphic-section {
+            position: relative;
+            height: 600px;
+        }
+
+        /* Добавление фото вместо круга */
+        .photo {
+            width: 350px;
+            height: 350px;
+            border-radius: 50%;
+            background: url('laura.jpg') center/cover no-repeat;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            border: 3px solid var(--primary);
+        }
+
+        .floating-element {
+            position: absolute;
+            width: 220px;
+            border: 3px solid var(--primary);
+            padding: 1.5rem;
+            background: var(--accent);
+            box-shadow: 10px 10px 0 rgba(255, 192, 203, 0.2);
+            animation: float 6s infinite ease-in-out;
+            font-size: 1.2rem;
+        }
+
+        .floating-element:nth-child(2) {
+            top: 15%;
+            right: 10%;
+            transform: rotate(5deg);
+        }
+
+        .floating-element:nth-child(3) {
+            bottom: 20%;
+            left: 5%;
+            transform: rotate(-3deg);
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translateY(0) rotate(5deg); }
+            50% { transform: translateY(-20px) rotate(-2deg); }
+        }
+
+        @media (max-width: 768px) {
+            .main-heading {
+                font-size: 2.8rem;
+            }
+            .sub-heading {
+                font-size: 1.5rem;
+            }
+            .age-number {
+                font-size: 4.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <section class="hero">
+            <div class="floating-box">
+                <h1 class="main-heading">Laura's birthday party</h1>
+                <p class="sub-heading">join us to celebrate</p>
+                <div class="age-number">18</div>
+                <ul class="details-list">
+                    <li>📅 Date: 08.03.2025</li>
+                    <li>⏰ Time: 17:40 - 23:00</li>
+                    <li>📍 Location: "autograph_karaoke, Достык, 20 БЦ Санкт-Петербург 21 этаж"</li>
+                </ul>
+            </div>
+        </section>
+        
+        <div class="graphic-section">
+            <div class="photo"></div> <!-- Фото вместо круга -->
+            <div class="floating-element">
+                <h3>🎩 Dress Code</h3>
+                <p>Black tie - tuxedo</p>
+            </div>
+            <div class="floating-element">
+                <h3>🎁 Gifts</h3>
+                <p>Money</p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
